@@ -1,0 +1,35 @@
+// Init
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+.img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+// Variables
+$background: #36384d;
+$text: #242742;
+$gray: #9193a0;
+$tomato: #ff6155;
+$gradient: linear-gradient(204.47deg, #ff6a3a, #ff527b);
+$font: "Roboto", sans-serif;
+
+// Styles
+body {
+  font-family: $font;
+  background: $background;
+  color: $text;
+}
