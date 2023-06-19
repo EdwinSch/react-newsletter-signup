@@ -39,7 +39,9 @@ function App() {
     <main>
       <section className="subscribe-container">
         <h2>Stay updated!</h2>
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <p className="margin-y">
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
         <ul>
           <Sellingppoint text="Product discovery and building what matters" />
           <Sellingppoint text="Measuring to ensure updates are a success" />
