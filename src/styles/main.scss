@@ -26,10 +26,45 @@ $gray: #9193a0;
 $tomato: #ff6155;
 $gradient: linear-gradient(204.47deg, #ff6a3a, #ff527b);
 $font: "Roboto", sans-serif;
+$inspect: solid red 1px;
 
 // Styles
 body {
   font-family: $font;
   background: $background;
   color: $text;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  background: white;
+  width: 928px;
+  height: 641px;
+  padding: 24px;
+  border-radius: 36px;
+  display: flex;
+}
+
+.subscribe-container {
+  flex: 1;
+  border: $inspect;
+  padding: 73px 24px;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+  }
+}
+
+.image-container {
+  flex: 1;
+  border: $inspect;
 }
