@@ -48,6 +48,8 @@ main {
   display: flex;
 }
 
+// Subscribe
+
 .subscribe-container {
   flex: 1;
   border: $inspect;
@@ -63,6 +65,20 @@ main {
     line-height: 24px;
   }
 }
+
+.list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  p {
+    margin-left: 16px;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+}
+
+//Image
 
 .image-container {
   flex: 1;
