@@ -52,7 +52,6 @@ main {
 
 .subscribe-container {
   flex: 1;
-  border: $inspect;
   padding: 73px 24px;
   display: flex;
   flex-direction: column;
@@ -106,6 +105,7 @@ form {
     height: 56px;
     width: 376px;
     border-radius: 8px;
+    border: none;
     font-family: $font;
     font-size: 1rem;
     font-weight: 700;
@@ -121,9 +121,11 @@ form {
   }
 }
 
-//Image
+// Image
 
 .image-container {
   flex: 1;
-  border: $inspect;
+  background-image: url(../assets/illustration-sign-up-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
