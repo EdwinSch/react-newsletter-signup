@@ -1,6 +1,6 @@
 import listIcon from "../assets/icon-list.svg";
 
-const Sellingppoint = ({ text }) => {
+const Sellingpoint = ({ text }) => {
   return (
     <li className="list-item">
       <img src={listIcon} alt="checkmark icon" />
@@ -9,4 +9,4 @@ const Sellingppoint = ({ text }) => {
   );
 };
 
-export default Sellingppoint;
+export default Sellingpoint;

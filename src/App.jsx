@@ -1,4 +1,5 @@
 import Sellingppoint from "./components/Sellingpoint";
+import Signup from "./components/Signup";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           <Sellingppoint text="Measuring to ensure updates are a success" />
           <Sellingppoint text="And much more!" />
         </ul>
+        <Signup />
       </section>
 
       <section className="image-container">{/* img */}</section>

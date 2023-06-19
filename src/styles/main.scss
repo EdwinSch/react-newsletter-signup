@@ -54,6 +54,9 @@ main {
   flex: 1;
   border: $inspect;
   padding: 73px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   h1 {
     font-size: 3.5rem;
@@ -75,6 +78,46 @@ main {
     margin-left: 16px;
     font-size: 1rem;
     font-weight: 400;
+  }
+}
+
+form {
+  label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  #email {
+    height: 56px;
+    width: 376px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    border: 1px solid $gray;
+    padding: 0 24px;
+    font-family: $font;
+    font-size: 1rem;
+    color: $text;
+  }
+  #email:focus {
+    outline: solid 1px $text;
+  }
+  button {
+    height: 56px;
+    width: 376px;
+    border-radius: 8px;
+    font-family: $font;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white;
+    background: $text;
+    transition: 200ms ease;
+    cursor: pointer;
+  }
+  button:hover {
+    background-image: $gradient;
+    border: none;
+    box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
   }
 }
 
