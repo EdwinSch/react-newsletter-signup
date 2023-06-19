@@ -28,7 +28,8 @@ $gradient: linear-gradient(204.47deg, #ff6a3a, #ff527b);
 $font: "Roboto", sans-serif;
 $inspect: solid red 1px;
 
-// Styles
+// Global Styles
+
 body {
   font-family: $font;
   background: $background;
@@ -48,6 +49,31 @@ main {
   display: flex;
 }
 
+h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 56px;
+}
+
+button {
+  height: 56px;
+  width: 376px;
+  border-radius: 8px;
+  border: none;
+  font-family: $font;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  background: $text;
+  transition: 200ms ease;
+  cursor: pointer;
+}
+button:hover {
+  background-image: $gradient;
+  border: none;
+  box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
+}
+
 // Subscribe
 
 .subscribe-container {
@@ -57,10 +83,6 @@ main {
   flex-direction: column;
   justify-content: space-between;
 
-  h1 {
-    font-size: 3.5rem;
-    font-weight: 700;
-  }
   p {
     font-size: 1rem;
     font-weight: 400;
@@ -101,24 +123,6 @@ form {
   #email:focus {
     outline: solid 1px $text;
   }
-  button {
-    height: 56px;
-    width: 376px;
-    border-radius: 8px;
-    border: none;
-    font-family: $font;
-    font-size: 1rem;
-    font-weight: 700;
-    color: white;
-    background: $text;
-    transition: 200ms ease;
-    cursor: pointer;
-  }
-  button:hover {
-    background-image: $gradient;
-    border: none;
-    box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
-  }
 }
 
 // Image
@@ -128,4 +132,30 @@ form {
   background-image: url(../assets/illustration-sign-up-desktop.svg);
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 16px;
+}
+
+// Feedback Card
+
+.feedback-card {
+  width: 504px;
+  height: 520px;
+  background: white;
+  padding: 48px 64px;
+  border-radius: 36px;
+
+  img {
+    width: 64px;
+    margin-bottom: 40px;
+  }
+  p {
+    margin-top: 24px;
+    margin-bottom: 40px;
+    font-size: 1rem;
+    line-height: 24px;
+
+    span {
+      font-weight: 700;
+    }
+  }
 }

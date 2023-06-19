@@ -1,6 +1,6 @@
-const Signup = () => {
+const Signup = ({ toggleSubscription }) => {
   return (
-    <form action="">
+    <form onSubmit={toggleSubscription}>
       <label htmlFor="email">Email address</label>
       <input
         type="email"

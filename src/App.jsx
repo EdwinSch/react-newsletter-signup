@@ -1,18 +1,51 @@
 import Sellingppoint from "./components/Sellingpoint";
 import Signup from "./components/Signup";
+import successIcon from "./assets/icon-success.svg";
+
+import { useState } from "react";
 
 function App() {
+  const [subscription, setSubscription] = useState(false);
+
+  // show feedbackcard
+  const toggleSubscription = (event) => {
+    event.preventDefault();
+    setSubscription(true);
+  };
+
+  // reset
+  const resetSubscription = () => {
+    setSubscription(false);
+  };
+
+  if (subscription === true) {
+    return (
+      <div className="feedback-card">
+        <img src={successIcon} alt="success icon" />
+        <h2>Thanks for subscribing!</h2>
+        <p>
+          A confirmation email has been sent to{" "}
+          <span>ash@loremcompany.com</span>. Please open it and click the button
+          inside to confirm your subscription.
+        </p>
+        <button type="button" onClick={resetSubscription}>
+          Dismiss message
+        </button>
+      </div>
+    );
+  }
+
   return (
     <main>
       <section className="subscribe-container">
-        <h1>Stay updated!</h1>
+        <h2>Stay updated!</h2>
         <p>Join 60,000+ product managers receiving monthly updates on:</p>
         <ul>
           <Sellingppoint text="Product discovery and building what matters" />
           <Sellingppoint text="Measuring to ensure updates are a success" />
           <Sellingppoint text="And much more!" />
         </ul>
-        <Signup />
+        <Signup toggleSubscription={toggleSubscription} />
       </section>
 
       <section className="image-container">{/* img */}</section>
