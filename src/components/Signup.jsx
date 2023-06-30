@@ -1,6 +1,6 @@
 const Signup = ({ toggleSubscription }) => {
   return (
-    <form onSubmit={toggleSubscription}>
+    <form onSubmit={toggleSubscription} noValidate>
       <label htmlFor="email">Email address</label>
       <input
         type="email"

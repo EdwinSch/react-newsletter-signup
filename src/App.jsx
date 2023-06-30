@@ -10,12 +10,7 @@ function App() {
   // show feedbackcard
   const toggleSubscription = (event) => {
     event.preventDefault();
-    setSubscription(true);
-  };
-
-  // reset
-  const resetSubscription = () => {
-    setSubscription(false);
+    setSubscription(!subscription);
   };
 
   if (subscription === true) {
@@ -28,7 +23,7 @@ function App() {
           <span>ash@loremcompany.com</span>. Please open it and click the button
           inside to confirm your subscription.
         </p>
-        <button type="button" onClick={resetSubscription}>
+        <button type="button" onClick={toggleSubscription}>
           Dismiss message
         </button>
       </div>
