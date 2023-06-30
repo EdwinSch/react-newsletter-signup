@@ -7,9 +7,8 @@ import { useState } from "react";
 function App() {
   const [subscription, setSubscription] = useState(false);
 
-  // show feedbackcard
-  const toggleSubscription = (event) => {
-    event.preventDefault();
+  // Toggle feedback
+  const toggleSubscription = () => {
     setSubscription(!subscription);
   };
 

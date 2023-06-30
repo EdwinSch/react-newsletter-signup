@@ -142,13 +142,26 @@ button:hover {
 }
 
 form {
-  label {
-    display: block;
-    font-size: 0.75rem;
-    font-weight: 700;
-    margin-bottom: 8px;
+  .labels {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 30px;
+    // margin-bottom: 8px;
+
+    label {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    p {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: $tomato;
+    }
   }
-  #email {
+
+  .valid {
     display: block;
     height: 56px;
     min-width: 376px;
@@ -160,13 +173,21 @@ form {
     font-size: 1rem;
     color: $text;
   }
+  .invalid {
+    border: 1px solid $tomato;
+    color: $tomato;
+    background: rgba(255, 97, 85, 0.15);
+  }
+  .invalid::placeholder {
+    color: $tomato;
+  }
   #email:focus {
     outline: solid 1px $text;
   }
 }
 
 @media only screen and (max-width: 500px) {
-  #email {
+  .valid {
     min-width: 376px;
     width: 100%;
   }
