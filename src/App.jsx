@@ -6,6 +6,7 @@ import { useState } from "react";
 
 function App() {
   const [subscription, setSubscription] = useState(false);
+  const [input, setInput] = useState("");
 
   // Toggle feedback
   const toggleSubscription = () => {
@@ -18,9 +19,8 @@ function App() {
         <img src={successIcon} alt="success icon" />
         <h2>Thanks for subscribing!</h2>
         <p>
-          A confirmation email has been sent to{" "}
-          <span>ash@loremcompany.com</span>. Please open it and click the button
-          inside to confirm your subscription.
+          A confirmation email has been sent to <span>{input}</span>. Please
+          open it and click the button inside to confirm your subscription.
         </p>
         <button type="button" onClick={toggleSubscription}>
           Dismiss message
@@ -41,7 +41,11 @@ function App() {
           <Sellingppoint text="Measuring to ensure updates are a success" />
           <Sellingppoint text="And much more!" />
         </ul>
-        <Signup toggleSubscription={toggleSubscription} />
+        <Signup
+          toggleSubscription={toggleSubscription}
+          input={input}
+          setInput={setInput}
+        />
       </section>
 
       <section className="image-container">{/* img */}</section>

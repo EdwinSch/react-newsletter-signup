@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const Signup = ({ toggleSubscription }) => {
-  const [input, setInput] = useState("");
+const Signup = ({ toggleSubscription, input, setInput }) => {
+  // const [input, setInput] = useState("");
   const [validate, setValidate] = useState(true);
 
   const handleChange = (event) => {
